@@ -9,7 +9,7 @@ function Footer() {
  
 
   return (
-    <footer className=" bg-green-700/10">
+    <footer className="bg-gradient-to-b from-black via-[#7E7ED7]  to-black">
       <div className=" sm:pt-[110px] pt-[50px]">
         {/* Top Section: Logo, Contact Info, CTA */}
         <div className="smm:max-w-[80%] sm:max-w-[88%] max-w-full mx-auto flex sm:flex-row flex-col sm:items-center px-[20px] sm:px-0 justify-between pb-[55px] border-b border-green-700">
