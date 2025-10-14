@@ -26,7 +26,7 @@ function About() {
        </div>
         </section>
         <p className="text-gray-300 text-[18px] font-[300] ">
-          Smart, reliable, and sustainable energy solutions made simple.
+        Trusted investment solutions built for stability, growth, and  success.
         </p>
       </div>
 

@@ -1,8 +1,8 @@
 import About from "./homecomponents/About"
 import Hero from "./homecomponents/Hero"
-import Services from "./homecomponents/Services"
 import Reviews from "./homecomponents/Reviews"
 import Contact from "./homecomponents/Contact"
+import HowWeDo from "./homecomponents/HowWeDo"
 
 function Home() {
   return (
@@ -11,8 +11,8 @@ function Home() {
         <section className="bg-gradient-to-b from-black to-[#7E7ED7]   pt-10">
         <About/>
         </section>
-        <section className="flex flex-col sm:w-[85%] w-[90%] mx-auto ">
-        <Services/>
+        <section className="flex flex-col  mx-auto bg-black">
+        <HowWeDo/>
         </section>
         <section className=" mb-10 bg-gradient-to-b ">
         <Reviews/>
