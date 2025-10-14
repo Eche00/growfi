@@ -28,7 +28,7 @@ function HowWeDo() {
       </div>
 
 
-      <main className="pt-20 pb-10 grid lg:grid-cols-3 xm:grid-cols-2 grid-cols-1 items-stretch justify-center gap-[20px] p-[10px]">
+      <main className="pt-20 pb-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-stretch justify-center gap-[20px] p-[10px]">
         {solutionInfo.map((b) => (
           <motion.div
             className="flex flex-col justify-between gap-10 pt-20 shadow-md p-[20px] rounded-[10px] bg-white/10  group"
@@ -38,7 +38,7 @@ function HowWeDo() {
             viewport={{ once: true }}>
            
            <div className="flex flex-col gap-2 ">
-           <h2 className="text-[22px] w-full text-nowrap  text-white group-hover:text-[#68FCC6] font-[600] ">
+           <h2 className="text-[22px] w-full   text-white group-hover:text-[#68FCC6] font-[600] ">
               {b.title}
             </h2>
             <p className="  text-gray-300 ">

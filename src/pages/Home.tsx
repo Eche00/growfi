@@ -3,6 +3,7 @@ import Hero from "./homecomponents/Hero"
 import Reviews from "./homecomponents/Reviews"
 import Contact from "./homecomponents/Contact"
 import HowWeDo from "./homecomponents/HowWeDo"
+import Success from "./homecomponents/Success"
 
 function Home() {
   return (
@@ -13,6 +14,9 @@ function Home() {
         </section>
         <section className="flex flex-col  mx-auto bg-black">
         <HowWeDo/>
+        </section>
+        <section className=" mb-10 bg-gradient-to-b ">
+        <Success/>
         </section>
         <section className=" mb-10 bg-gradient-to-b ">
         <Reviews/>
