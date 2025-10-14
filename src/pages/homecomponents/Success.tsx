@@ -1,4 +1,5 @@
 import { Circle } from "@mui/icons-material"
+import Reviews from "./Reviews"
 
 function Success() {
   return (
@@ -25,7 +26,7 @@ function Success() {
       </div>
 
   {/* review container */}
-  <main className="w-full flex items-center justify-center py-20">
+  <main className="w-full flex items-center justify-center pt-20 pb-10">
   <section className="flex flex-wrap justify-center gap-10 sm:px-5 max-w-7xl">
     {/* Card 1 */}
     <div className="bg-white/10 rounded-xl shadow-md overflow-hidden max-w-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg p-5">
@@ -103,6 +104,7 @@ function Success() {
     </div>
   </section>
 </main>
+<Reviews/>
 
 
     </div>

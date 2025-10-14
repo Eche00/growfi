@@ -1,6 +1,5 @@
 import About from "./homecomponents/About"
 import Hero from "./homecomponents/Hero"
-import Reviews from "./homecomponents/Reviews"
 import Contact from "./homecomponents/Contact"
 import HowWeDo from "./homecomponents/HowWeDo"
 import Success from "./homecomponents/Success"
@@ -18,9 +17,7 @@ function Home() {
         <section className=" mb-10 bg-gradient-to-b ">
         <Success/>
         </section>
-        <section className=" mb-10 bg-gradient-to-b ">
-        <Reviews/>
-        </section>
+       
         <section className="flex flex-col sm:w-[85%] w-[90%] mx-auto ">
         <Contact/>
         </section>
