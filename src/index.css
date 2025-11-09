@@ -18,3 +18,55 @@
     @apply transition-colors duration-500;
   }
 }
+
+.custom-swiper .swiper-button-next,
+.custom-swiper .swiper-button-prev {
+  color: #68FCC6;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  top: 0px; 
+}
+
+.custom-swiper .swiper-button-next:hover,
+.custom-swiper .swiper-button-prev:hover {
+  background: #68FCC6;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.custom-swiper .swiper-button-next::after,
+.custom-swiper .swiper-button-prev::after {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Position horizontally */
+.custom-swiper .swiper-button-next {
+  right: 10px;
+}
+
+.custom-swiper .swiper-button-prev {
+  left: 10px;
+}
+
+/* Pagination dots style */
+.custom-swiper .swiper-pagination {
+  bottom: -50px; /* move below slides for better layout */
+}
+
+.custom-swiper .swiper-pagination-bullet {
+  background: #68FCC6;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.custom-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.3);
+}

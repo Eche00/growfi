@@ -4,6 +4,7 @@ import Contact from "./homecomponents/Contact"
 import HowWeDo from "./homecomponents/HowWeDo"
 import Success from "./homecomponents/Success"
 import Records from "./homecomponents/Records"
+import Challenges from "./homecomponents/Challenges"
 
 function Home() {
   return (
@@ -22,7 +23,9 @@ function Home() {
         <section className=" mb-10 bg-gradient-to-b ">
         <Success/>
         </section>
-       
+        <section className="flex flex-col  mx-auto bg-black">
+        <Challenges/>
+        </section>
         <section className="flex flex-col sm:w-[85%] w-[90%] mx-auto ">
         <Contact/>
         </section>
