@@ -7,8 +7,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { challengesInfo } from "../../utils/challenges";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Challenges() {
+  const [show,setShow]= useState<boolean>(false);
   return (
    <div className=" py-[100px] sm:w-[85%] w-[90%] mx-auto overflow-hidden"> 
   <div className="text-[#333]  pl-2 ">
@@ -33,7 +36,42 @@ function Challenges() {
       </div>
 
 
-      <main className="pt-20 pb-10 flex  w-full items-stretch justify-center gap-[20px]">
+    <AnimatePresence mode="wait"> 
+{show ? <motion.main initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0.8 }}
+            transition={{ duration: 1, delay: 0 }}
+            viewport={{ once: true }} className="pt-20 pb-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-stretch justify-center gap-[20px] p-[10px]">
+         {challengesInfo.map((b) => (
+          <motion.div
+          initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+      transition={{ duration: 0.6 }}
+            className="flex flex-col justify-between gap-10 pt-20 shadow-md p-[20px] rounded-[10px] bg-white/10  group"
+            >
+           
+           <div className="flex flex-col gap-2 ">
+           <h2 className="text-[22px] w-full   text-white group-hover:text-[#68FCC6] font-[600] ">
+              {b.title}
+            </h2>
+            <p className="  text-gray-300 ">
+              {b.writeup}
+            </p>
+           </div>
+
+            <div className=" border-t-[1px] border-[#68FCC6] pt-[20px]">
+            </div>
+          </motion.div>
+        ))}
+        </motion.main>
+
+       : 
+       <motion.main 
+           initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+      transition={{ duration: 0.6 }} className="pt-20 pb-10 flex flex-col  w-full items-stretch justify-center gap-[20px]">
         <Swiper
          className="custom-swiper w-full  "
           modules={[Navigation, Pagination, Autoplay]}
@@ -62,13 +100,17 @@ function Challenges() {
            </div>
 
             <div className=" border-t-[1px] border-[#68FCC6] pt-[20px]">
-             <button className=" text-white hover:text-[#68FCC6] text-[14px] border-b hover:border-[#68FCC6] cursor-pointer transition-all duration-300">View More</button>
+             <button onClick={()=>setShow(!show)}  className=" text-white hover:text-[#68FCC6] text-[14px] border-b hover:border-[#68FCC6] cursor-pointer transition-all duration-300">View More</button>
             </div>
           </SwiperSlide>
         ))}
 </Swiper>
-      </main>
-      <Link to='/calculator'  className="py-[8px] px-[32px]  bg-black text-white   md:flex hidden items-center justify-center rounded-full shadow-[0_0_6px_0_#68FCC6] w-fit mx-auto">View More</Link>
+
+      </motion.main>
+      
+      }
+      </AnimatePresence>
+      <button onClick={()=>setShow(!show)}  className="py-[8px] px-[32px]  bg-black text-white   md:flex hidden items-center justify-center rounded-full shadow-[0_0_6px_0_#68FCC6] w-fit mx-auto cursor-pointer">View {show ? "Less" : "More"}</button>
 
     </div>
   )

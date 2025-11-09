@@ -3,7 +3,7 @@ import {  Circle, LocationOn } from "@mui/icons-material";
 
 function Contact() {
   return (
-    <div className="relative min-h-[100vh]">
+    <div className="relative min-h-[100vh] pt-5">
       <div className="text-[#333]  pl-2 ">
         <section className="flex items-center justify-between">
         <p className=" font-[600] sm:text-[38px] text-[26px] text-white  pl-2 ">

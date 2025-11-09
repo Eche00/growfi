@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom"
 import Container from "./components/Container"
 import Home from "./pages/Home"
-import Mentorship from "./pages/Mentorship"
+import About from "./pages/About"
 import Signals from "./pages/Signals"
 import Courses from "./pages/Courses"
 import ScrollToTop from "./components/ScrollToTop";
@@ -20,7 +20,7 @@ function App() {
               {/* General Routes */}
              <Route element={<Container/>}>
                    <Route path="/" element={<Home/>}/>
-                   <Route path="/mentorship" element={<Mentorship/>}/>
+                   <Route path="/about" element={<About/>}/>
                    <Route path="/signals" element={<Signals/>}/>
                    <Route path="/courses" element={<Courses/>}/>
                    <Route path="/calculator" element={<Calculator/>}/>

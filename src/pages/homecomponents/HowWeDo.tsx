@@ -47,13 +47,13 @@ function HowWeDo() {
            </div>
 
             <div className=" border-t-[1px] border-[#68FCC6] pt-[20px]">
-             <button className=" text-white hover:text-[#68FCC6] text-[14px] border-b hover:border-[#68FCC6] cursor-pointer transition-all duration-300">Learn More</button>
+             <Link to="about" className=" text-white hover:text-[#68FCC6] text-[14px] border-b hover:border-[#68FCC6] cursor-pointer transition-all duration-300">Learn More</Link>
             </div>
           </motion.div>
         ))}
 
       </main>
-      <Link to='/calculator'  className="py-[8px] px-[32px]  bg-black text-white   md:flex hidden items-center justify-center rounded-full shadow-[0_0_6px_0_#68FCC6] w-fit mx-auto">Learn More</Link>
+      <Link to='/about'  className="py-[8px] px-[32px]  bg-black text-white   md:flex hidden items-center justify-center rounded-full shadow-[0_0_6px_0_#68FCC6] w-fit mx-auto">Learn More</Link>
 
     </div>
   )
