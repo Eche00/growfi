@@ -1,108 +1,84 @@
-import { CheckCircle } from "@mui/icons-material";
 import { motion } from "framer-motion";
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import GroupIcon from '@mui/icons-material/Group';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import { Link } from "react-router-dom";
 
-const packages = [
+const values = [
   {
-    title: "Online Class",
-    image: "/onlineclass.webp",
-    features: [
-      "Live interactive Zoom sessions",
-      "Access to recordings",
-      "Weekly Q&A with mentors",
-      "Structured beginner-to-pro curriculum",
-    ],
-    price: 250,
+    icon: <EmojiEventsIcon className="text-[#68FCC6]" fontSize="large" />,
+    title: "Target-oriented",
+    text: "At GrowFi, every move is intentional, we don’t just set targets, we create pathways to reach them. Our data-driven insights help you trade with purpose and precision.",
   },
   {
-    title: "Physical Class",
-    image: "/physicalclass.webp",
-    features: [
-      "In-person training in small groups",
-      "Hands-on market simulations",
-      "Networking with fellow traders",
-      "Printed learning materials",
-    ],
-    price: 200,
+    icon: <GroupIcon className="text-[#68FCC6]" fontSize="large" />,
+    title: "Teamwork",
+    text: "Behind every smart strategy is collaboration. At GrowFi, we believe success is built together, by sharing knowledge, ideas, and growth opportunities across our community.",
   },
   {
-    title: "Private Online Class",
-    image: "/privateonlineclass.webp",
-    features: [
-      "One-on-one mentorship via Zoom",
-      "Personalized trading strategies",
-      "Flexible class schedules",
-      "Direct access to mentor chat support",
-    ],
-    price: 450,
+    icon: <TrendingUpIcon className="text-[#68FCC6]" fontSize="large" />,
+    title: "Winning",
+    text: "Winning at GrowFi isn’t about luck, it’s about preparation, insight, and execution. We empower traders to make confident decisions that lead to consistent success.",
   },
   {
-    title: "Private Physical Class",
-    image: "/physicalprivateclass.webp",
-    features: [
-      " Premium one-on-one coaching",
-      "Tailored forex roadmap",
-      "Practical live trading sessions",
-      "Lifetime mentorship support",
-    ],
-    price: 600,
-  },
-  {
-    title: "Exclusive Class",
-    image: "/exclusiveclass.webp",
-    features: [
-      "Exclusive one-on-one mentorship",
-      "Lifetime access to mentorship community",
-      "Advanced trading strategies",
-      "Direct access to expert mentors 24/7",
-    ],
-    price: 950,
+    icon: <RocketLaunchIcon className="text-[#68FCC6]" fontSize="large" />,
+    title: "Growth",
+    text: "Growth is more than a metric, it’s our mindset. At GrowFi, we help you expand your potential, sharpen your strategy, and evolve into the investor you’re meant to be.",
   },
 ];
 
-function Packages() {
+function TeamSection() {
   return (
-    <div className="py-12 px-6 md:px-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-        Our Mentorship Packages
-      </h2>
+    <div className="w-full flex justify-center flex-col min-h-[90vh]">
+      {/* Top Section */}
+     
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="relative py-20 text-center "
+      >
+        <div className=" flex justify-center items-center ">
+          <div className="w-[90%] mx-auto flex flex-col items-center gap-4 relative z-10">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#68FCC6]">
+            Experience That Drives Success
+            </h2>
+            <p className="max-w-2xl mx-auto text-white leading-relaxed">
+              We’re building a team that thrives on expertise and innovation. Every member contributes to delivering top-tier service and cutting-edge solutions. With a growing network across the UK, our team is shaping the future of trading, together.
 
-      <motion.div className="flex flex-wrap items-center justify-center gap-8 "
-      initial={{ y: 50, opacity: 0 }}
-      whileInView={{ y: 1, opacity: 1 }}
-      transition={{ duration: 1.5, delay: 0.3 }}  
-      viewport={{once:true}}>
-        {packages.map((pkg, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-transform duration-300 lg:max-w-[380px] max-w-[90%] w-full"
+            </p>
+            <Link
+                 to='/mentorship'
+                  className="flex items-center justify-center gap-[10px] rounded-full bg-gradient-to-b from-80% from-[#68FCC6]  to-white text-black sm:py-[10px] py-[12px]  sm:w-[200px] w-[150px] text-[16px] sm:text-[18px] font-[400] cursor-pointer hover:scale-105 transition-all duration-300">
+                 Get started
+                </Link>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Bottom Section */}
+
+       <section className=" py-20 px-6 md:px-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10 text-[#111] ">
+        {values.map((v, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: i * 0.1 }}
+            viewport={{ once: true }}
+            className="flex flex-col gap-3 items-start"
           >
-            <img
-              src={pkg.image}
-              alt={pkg.title}
-              className="h-48 w-full object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">
-                {pkg.title}
-              </h3>
-              <ul className="space-y-2">
-                {pkg.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-2 text-gray-600">
-                    <CheckCircle className="h-5 w-5 text-green-700 mt-0.5" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+            <div className="mb-2 flex items-baseline justify-start gap-2">{v.icon} <h3 className="text-[20px] font-semibold text-white">{v.title}</h3></div>
             
-            </div>
-          <div className="flex items-end justify-end">
-          <p className="text-xl font-semibold mb-4 text-gray-800 w-fit px-2 mx-5 text-right border-b-2 border-green-700"> ${pkg.price} </p>
-          </div>
-          </div>
+            <p className="text-gray-600 text-[15px] leading-relaxed">{v.text}</p>
+          </motion.div>
         ))}
-      </motion.div>
+      </section>
+
     </div>
   );
 }
 
-export default Packages;
+export default TeamSection;
