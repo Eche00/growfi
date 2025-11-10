@@ -30,7 +30,7 @@ function Header() {
 
 
          <div className="md:flex hidden flex-1 items-center justify-end ">
-          <Link to='/calculator'  className="py-[8px] px-[32px]  bg-black text-white   md:flex hidden items-center justify-center rounded-full shadow-[0_0_6px_0_#68FCC6]">Get started</Link>
+          <Link to='/signup'  className="py-[8px] px-[32px]  bg-black text-white   md:flex hidden items-center justify-center rounded-full shadow-[0_0_6px_0_#68FCC6]">Get started</Link>
          </div>
         
          <button className=" md:hidden flex  text-white" onClick={()=>setDropDown(!dropDown)}>{dropDown ? <Close fontSize="medium"/> :<DragHandleIcon fontSize="medium"/>}</button>

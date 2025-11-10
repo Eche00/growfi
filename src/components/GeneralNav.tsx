@@ -23,7 +23,7 @@ function GeneralNav({setDropDown}: DropdownProp) {
             
           <div className="flex sm:flex-row flex-col sm:items-center gap-[20px]">
              
-          <Link to='/calculator'  className="py-[8px] px-[32px] w-fit  bg-black text-white flex  items-center justify-center rounded-full shadow-[0_0_6px_0_#68FCC6] ml-auto mr-10">Get started</Link>
+          <Link to='/signup'  className="py-[8px] px-[32px] w-fit  bg-black text-white flex  items-center justify-center rounded-full shadow-[0_0_6px_0_#68FCC6] ml-auto mr-10">Get started</Link>
           </div>
 
          

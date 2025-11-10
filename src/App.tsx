@@ -4,8 +4,8 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Plans from "./pages/Plans"
 import ScrollToTop from "./components/ScrollToTop";
-import Calculator from "./pages/Calculator"
 import Faqs from "./pages/Faqs"
+import SignUp from "./authentication/SignUp"
 
 
 
@@ -23,8 +23,9 @@ function App() {
                    <Route path="/about" element={<About/>}/>
                    <Route path="/plans" element={<Plans/>}/>
                    <Route path="/faqs" element={<Faqs/>}/>
-                   <Route path="/calculator" element={<Calculator/>}/>
              </Route>
+                   <Route path="/signup" element={<SignUp/>}/>
+
         </Routes>
       </BrowserRouter>
     </div>

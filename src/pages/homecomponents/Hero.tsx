@@ -21,7 +21,7 @@ function Hero() {
               
              >
                <div className=" flex items-center border-[1px] border-[#68FCC6] rounded-full w-fit p-2">
-                 <Link to='/signals'  className=" sm:text-[12px] text-[9px] text-nowrap  font-[400] py-[10px] px-[20px] bg-gradient-to-b from-80% from-[#68FCC6]  to-white text-black rounded-full hover:scale-[102%] transition-all duration-300 cursor-pointer border-none">
+                 <Link to='/plans'  className=" sm:text-[12px] text-[9px] text-nowrap  font-[400] py-[10px] px-[20px] bg-gradient-to-b from-80% from-[#68FCC6]  to-white text-black rounded-full hover:scale-[102%] transition-all duration-300 cursor-pointer border-none">
                 INVESTMENT PLANS
                 </Link>
                <p className=" sm:text-[12px] text-[9px] text-nowrap font-[400] py-[10px] px-[20px] text-white ">
@@ -46,13 +46,13 @@ function Hero() {
                   <div className=" flex items-center justify-center sm:gap-[24px] gap-2  py-10 w-fit">
                   
                 <Link
-                 to='/mentorship'
+                 to='/signup'
                   className="flex items-center justify-center gap-[10px] rounded-full bg-gradient-to-b from-80% from-[#68FCC6]  to-white text-black sm:py-[10px] py-[12px]  sm:w-[200px] w-[150px] text-[16px] sm:text-[18px] font-[400] cursor-pointer hover:scale-105 transition-all duration-300">
                  Get started
                 </Link>
                
                 <Link
-                  to="/courses"
+                  to="/about"
                   className=" sm:py-[10px] py-[12px] sm:w-[200px] w-[150px] text-[16px] text-white sm:text-[18px]   rounded-full flex items-center justify-center font-[400] cursor-pointer hover:scale-105 transition-all duration-300">
                   How it works  <ArrowOutwardIcon/>
                 </Link>
