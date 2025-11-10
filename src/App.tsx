@@ -6,6 +6,8 @@ import Plans from "./pages/Plans"
 import ScrollToTop from "./components/ScrollToTop";
 import Faqs from "./pages/Faqs"
 import SignUp from "./authentication/SignUp"
+import SignIn from "./authentication/SignIn"
+import ForgotPassword from "./authentication/ForgotPassword"
 
 
 
@@ -25,6 +27,8 @@ function App() {
                    <Route path="/faqs" element={<Faqs/>}/>
              </Route>
                    <Route path="/signup" element={<SignUp/>}/>
+                   <Route path="/signin" element={<SignIn/>}/>
+                   <Route path="/forgot-password" element={<ForgotPassword/>}/>
 
         </Routes>
       </BrowserRouter>
