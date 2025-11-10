@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom"
 import { Close } from "@mui/icons-material"
 import GeneralNav from "./GeneralNav";
 import DragHandleIcon from '@mui/icons-material/DragHandle';
+import { motion } from "framer-motion";
 
 function Header() {
   const [dropDown,setDropDown] = useState(false)
@@ -35,8 +36,20 @@ function Header() {
          <button className=" md:hidden flex  text-white" onClick={()=>setDropDown(!dropDown)}>{dropDown ? <Close fontSize="medium"/> :<DragHandleIcon fontSize="medium"/>}</button>
        </section>
 
-       {dropDown &&    
+       <motion.section
+       initial={{ height: 0, opacity: 0 }}
+  animate={{
+    height: dropDown ? "auto" : 0,
+    opacity: dropDown ? 1 : 0,
+  }}
+ 
+  transition={{ duration: 0.35, ease: "easeInOut" }}
+  className="overflow-hidden"
+
+       >
+        {dropDown &&    
        <GeneralNav setDropDown={setDropDown} />}
+       </motion.section>
     </div>
   )
 }
