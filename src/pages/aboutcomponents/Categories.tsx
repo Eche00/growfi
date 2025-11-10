@@ -40,7 +40,7 @@ function Categories() {
             {/* Avatar */}
             <div className="flex items-end justify-end pr-5 w-full relative">
               <img
-                src="https://d2hpp4ok8w7j4q.cloudfront.net/assets/Investment-strategies-for-beginners.jpg"
+                src="https://bhima.ae/wp-content/uploads/2024/02/Banner.png"
                 alt="our mission img"
                 className="w-[95%] h-[200px] object-cover rounded-[18px] absolute -top-1/1 left-1/2 -translate-x-1/2 "
               />
