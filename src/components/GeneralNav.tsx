@@ -17,7 +17,7 @@ function GeneralNav({setDropDown}: DropdownProp) {
           <NavLink to='/' className={({isActive})=> isActive ? 'text-[#68FCC6] font-bold text-sm cursor-pointer p-[10px]  border-b border-gray-500': ' text-gray-300 font-bold text-sm cursor-pointer p-[10px]  border-b border-[#68FCC6]'}>Home</NavLink>
           <NavLink to='/about' className={({isActive})=> isActive ? 'text-[#68FCC6] font-bold text-sm cursor-pointer p-[10px]  border-b border-[#68FCC6]': ' text-gray-300 font-bold text-sm cursor-pointer p-[10px]  border-b border-[#68FCC6]'}>About</NavLink>
           <NavLink to='/plans' className={({isActive})=> isActive ? 'text-[#68FCC6] font-bold text-sm cursor-pointer p-[10px]  border-b border-[#68FCC6]': ' text-gray-300 font-bold text-sm cursor-pointer p-[10px]  border-b border-[#68FCC6]'}>Plans</NavLink>
-          <NavLink to='/courses' className={({isActive})=> isActive ? 'text-[#68FCC6] font-bold text-sm cursor-pointer p-[10px]  border-b border-[#68FCC6]': ' text-gray-300 font-bold text-sm cursor-pointer p-[10px]  border-b border-[#68FCC6]'}>Courses </NavLink>
+          <NavLink to='/faqs' className={({isActive})=> isActive ? 'text-[#68FCC6] font-bold text-sm cursor-pointer p-[10px]  border-b border-[#68FCC6]': ' text-gray-300 font-bold text-sm cursor-pointer p-[10px]  border-b border-[#68FCC6]'}>FAQ </NavLink>
            </div>
             
           <div className="flex sm:flex-row flex-col sm:items-center gap-[20px]">

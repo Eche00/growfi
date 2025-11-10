@@ -23,7 +23,7 @@ function Header() {
           <NavLink to='/' className={({isActive})=> isActive ? 'text-[#68FCC6] font-bold text-sm': ' text-gray-700 font-bold text-sm'}>Home</NavLink>
           <NavLink to='/about' className={({isActive})=> isActive ? 'text-[#68FCC6] font-bold text-sm': ' text-gray-700 font-bold text-sm'}>About</NavLink>
           <NavLink to='/plans' className={({isActive})=> isActive ? 'text-[#68FCC6] font-bold text-sm': ' text-gray-700 font-bold text-sm'}>Plans</NavLink>
-          <NavLink to='/courses' className={({isActive})=> isActive ? 'text-[#68FCC6] font-bold text-sm': ' text-gray-700 font-bold text-sm'}>Courses</NavLink>
+          <NavLink to='/faqs' className={({isActive})=> isActive ? 'text-[#68FCC6] font-bold text-sm': ' text-gray-700 font-bold text-sm'}>FAQ</NavLink>
          </nav>
          </div>
 
