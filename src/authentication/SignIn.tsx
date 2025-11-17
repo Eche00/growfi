@@ -1,7 +1,11 @@
+import Authanimation from "./Authanimation"
 
 function SignIn() {
   return (
-    <div>SignIn</div>
+    <div className="flex">
+      <Authanimation/>
+    SignIn
+    </div>
   )
 }
 
