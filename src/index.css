@@ -1,16 +1,25 @@
 @import "tailwindcss";
 
 
- @theme{
-    --breakpoint-xm: 410px;
- }
+@theme {
+  --breakpoint-xm: 410px;
+  --breakpoint-mm: 550px;
+
+}
+
+
+
 
 /* Base layer setup */
 @layer base {
-  html, body {
+
+  html,
+  body {
     @apply min-h-screen m-0 p-0;
-    background-color: transparent; /* let pages handle their own bg */
-    color-scheme: light dark; /* support both themes naturally */
+    background-color: transparent;
+    /* let pages handle their own bg */
+    color-scheme: light dark;
+    /* support both themes naturally */
   }
 
   /* Optional: smooth transition between themes */
@@ -30,7 +39,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  top: 0px; 
+  top: 0px;
 }
 
 .custom-swiper .swiper-button-next:hover,
@@ -57,7 +66,8 @@
 
 /* Pagination dots style */
 .custom-swiper .swiper-pagination {
-  bottom: -50px; /* move below slides for better layout */
+  bottom: -50px;
+  /* move below slides for better layout */
 }
 
 .custom-swiper .swiper-pagination-bullet {
