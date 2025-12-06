@@ -8,15 +8,15 @@ import GroupAddIcon from '@mui/icons-material/GroupAdd';
 
 const linkStyle = ({ isActive }: { isActive: boolean }) =>
     isActive
-        ? "flex flex-col items-center justify-center gap-1 py-4 rounded-xl border border-[#7E7ED7] shadow-[0_0_15px_rgba(255,255,255,0.05)] text-white transition"
-        : "flex flex-col items-center justify-center gap-1 py-4 rounded-xl text-gray-400 hover:text-white transition";
+        ? "flex flex-col items-center justify-center gap-1 w-[100px] h-[100px] rounded-xl border border-[#7E7ED7] shadow-[0_0_15px_rgba(255,255,255,0.05)] text-white transition"
+        : "flex flex-col items-center justify-center gap-1 w-[100px] h-[100px] rounded-xl text-gray-400 hover:text-white transition";
 
 function Sidebar() {
     return (
         <div className="bg-[#16162E] fixed top-0 left-0 w-[270px] h-screen flex flex-col items-center py-10 gap-10">
 
             {/* GRID MENU */}
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid grid-cols-2 gap-4">
 
                 <NavLink to="/dashboard" className={linkStyle}>
                     <SpaceDashboardIcon fontSize="small" />

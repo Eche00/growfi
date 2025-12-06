@@ -35,7 +35,7 @@ function Dashcontainer() {
 
                 <section className="mm:pl-[270px] flex-1 flex flex-col min-h-screen overflow-y-scroll">
                     <Header nav={nav} setNav={setNav} />
-                    <div className=' sm:py-0 py-32 bg-[#303058]'>
+                    <div className=' sm:pt-0 pt-32 bg-[#303058]'>
                         <Outlet />
                     </div>
                 </section>
